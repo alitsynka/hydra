@@ -1,0 +1,54 @@
+@import "../../../assets/styles/mixines.module.scss";
+
+
+.Wr {
+  width: 90% !important;
+  height: 100%;
+  display: none !important;
+  @include break($breakpoint_l) {
+    display: block !important;
+  }
+
+  .WrapperArrow {
+    @include flexibleRow;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    justify-content: center;
+    background: rgba(14, 14, 14, 0.32);
+    position: absolute;
+    z-index: 9999;
+    bottom: 0;
+    left: -20px;
+
+    &:last-child {
+      bottom: 0;
+      left:90%;
+      @include break($breakpoint_s) {
+        left:85%;
+      }
+    }
+
+    .Gradient {
+      @include flexibleRow;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      justify-content: center;
+      background: linear-gradient(268deg, #C0B7E8 -0.6%, #8176AF 98.31%);
+      .NextArrow {
+        position: absolute;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .SliderCustom {
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    @include break($breakpoint_l) {
+      @include StepBlock;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "../../assets/styles/mixines.module.scss";
+
+
+.Wrapper {
+  @include Wrapper;
+  margin-top: 50px;
+
+  .Container {
+    @include MainContainer;
+    @include flexibleCol;
+    border-radius: 100px;
+    background: radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 85px 105px;
+    @include break($breakpoint_xl) {
+      padding: 45px 21px 50px 21px;
+    }
+
+    svg {
+      width: 100%;
+    }
+
+    h2 {
+      @include Font36('Montserrat-Bold');
+      margin-bottom: 30px;
+
+    }
+
+    p {
+      @include Font36('Montserrat');
+      margin-top: 20px;
+      text-align: center;
+      @include break($breakpoint_s) {
+        @include Font24;
+        font-family: 'Montserrat-Thin';
+        text-align: center;
+      }
+    }
+
+    .Form {
+      @include flexibleCol;
+      width: 100%;
+      margin-top: 65px;
+      row-gap: 40px;
+      @include break($breakpoint_s) {
+        row-gap: 20px;
+        margin-top: 30px;
+      }
+
+      .WrapperForm {
+        @include flexibleRow;
+        width: 100%;
+        column-gap: 10px;
+        @include break($breakpoint_800) {
+          @include flexibleCol;
+          row-gap: 20px;
+        }
+
+        input {
+          @include Input;
+
+          &::placeholder {
+            @include Placeholder;
+          }
+        }
+      }
+
+      input {
+        @include Input;
+
+        &::placeholder {
+          @include Placeholder;
+        }
+      }
+
+      textarea {
+        @include Input;
+        min-height: 210px;
+
+        &::placeholder {
+          @include Placeholder;
+        }
+      }
+
+      button {
+        margin-top: 20px;
+        @include BigBtn;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../assets/styles/mixines.module.scss";
+
+.Wr {
+  width: 100%;
+  max-width: 1200px;
+  display: none;
+  height: 140px;
+
+  > div {
+    max-height: 90px;
+  }
+
+  @include break($breakpoint_800) {
+    display: block;
+  }
+  @include break($breakpoint_s) {
+    height: 90px;
+  }
+
+  & > div > svg {
+    width: 30px !important;
+    height: 30px !important;
+    z-index: 99;
+
+    &:last-child {
+      right: 2%;
+      top: 30%;
+      transform: rotate(180deg);
+    }
+
+    &:first-child {
+      left: 2%;
+    }
+
+  }
+
+  .ContactBlock {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    @include ContactBlock;
+
+    .DescContactBlock {
+      max-width: 250px;
+
+      h4 {
+        @include Font24;
+        margin-bottom: 10px;
+        @include break($breakpoint_s) {
+          display: none;
+        }
+      }
+
+      p {
+        @include Font14;
+      }
+    }
+
+    .MailSvg, .TelSvg{
+      width: 30px;
+      height: 30px;
+      margin-right: 7px;
+    }
+    .LocSvg {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
