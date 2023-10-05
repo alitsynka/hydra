@@ -1,0 +1,105 @@
+@import "../../assets/styles/mixines.module.scss";
+
+
+.Wrapper {
+  @include Wrapper;
+  margin-top: 50px;
+  padding-bottom: 70px;
+  @include break($breakpoint_xxl) {
+    padding-bottom: 70px;
+  }
+
+  .Container {
+    @include MainContainer;
+    @include flexibleRow;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 20px;
+    row-gap: 30px;
+
+    @include break($breakpoint_l) {
+      flex-wrap: wrap;
+    }
+    @include break($breakpoint_s) {
+      @include flexibleCol;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+    }
+
+    .Logo {
+      width: 185px;
+      height: 187px;
+    }
+
+    .List {
+      @include flexibleCol;
+      justify-content: space-between;
+      row-gap: 13px;
+
+      li {
+        a {
+          @include Font16;
+          font-family: 'Montserrat-Bold';
+          text-transform: uppercase;
+        }
+      }
+
+      @include break($breakpoint_s) {
+        display: none;
+      }
+    }
+
+    .WrapperSoc {
+      height: 100%;
+      @include flexibleCol;
+      justify-content: space-between;
+      align-items: flex-start;
+      @include break($breakpoint_s) {
+        align-items: center;
+      }
+
+      p {
+        @include Font16;
+        font-family: 'Montserrat-Bold';
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      .SoNetworks {
+        @include flexibleRow;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        column-gap: 20px;
+      }
+
+      button {
+        @include BigBtn;
+      }
+    }
+
+    .Line {
+      @include break($breakpoint_s) {
+
+        display: none;
+      }
+    }
+
+    .Allreserveds {
+      display: none;
+      @include break(600px) {
+        display: block !important;
+      }
+        p{
+          @include Font14;
+          font-family: 'Montserrat-Bold';
+          letter-spacing: 1.82px;
+          text-align: center;
+          max-width: 275px;
+          line-height: 2rem;
+        }
+    }
+  }
+
+}

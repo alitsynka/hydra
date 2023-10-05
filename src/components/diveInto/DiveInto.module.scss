@@ -1,0 +1,165 @@
+@import "../../assets/styles/mixines.module.scss";
+
+.Wrapper {
+  @include Wrapper;
+  margin-top: 50px;
+
+  .Container {
+    @include MainContainer;
+    @include flexibleCol;
+
+    .TopBlock {
+      @include flexibleRow;
+      width: 100%;
+      justify-content: space-between;
+      @include break($breakpoint_s) {
+        @include flexibleCol;
+        flex-direction: column-reverse;
+      }
+
+      .DescBlock {
+        @include break($breakpoint_s) {
+          @include flexibleCol;
+
+        }
+
+        .Title {
+          @include Font40;
+          @include break($breakpoint_s) {
+            @include Font24;
+            text-align: center;
+          }
+
+          &:nth-child(2) {
+            margin-bottom: 35px;
+            @include break($breakpoint_s) {
+              margin-bottom: 10px;
+            }
+          }
+
+          span {
+            background: linear-gradient(92deg, #C0B7E8 -1.02%, #8176AF 36.25%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 46px;
+            @include break($breakpoint_s) {
+              @include Font36('Montserrat-Medium');
+              text-align: center;
+            }
+          }
+        }
+
+        p {
+          @include Font16;
+          max-width: 450px;
+          margin-bottom: 40px;
+          @include break($breakpoint_s) {
+            display: none;
+          }
+        }
+
+        .BtnBlock {
+          @include flexibleRow;
+
+          svg {
+            @include break($breakpoint_s) {
+              display: none;
+            }
+          }
+
+          button {
+            @include BigBtn;
+            border-radius: 40px;
+            @include break($breakpoint_s) {
+              margin: 30px 0 50px 0;
+            }
+
+          }
+        }
+      }
+
+      .ImageBlock {
+        @include flexibleRow;
+        justify-content: center;
+        width: 524px;
+        height: 455px;
+        border-radius: 100px 100px 100px 240px;
+        background: rgba(0, 0, 0, 0.13);
+        overflow: hidden;
+        //margin-left: 20px;
+
+        @include break($breakpoint_s) {
+          @include flexibleCol;
+          width: 330px;
+          height: 290px;
+          margin-bottom: 30px;
+          border-radius: 70px 70px 70px 160px;
+        }
+
+
+        img {
+          width: 490px;
+          height: 426px;
+          object-fit: cover;
+          @include break($breakpoint_s) {
+            @include flexibleCol;
+            width: 318.665px;
+            height: 277.043px;
+          }
+        }
+      }
+    }
+
+    .ContactBlok {
+      @include flexibleRow;
+      @include ContactBlock;
+      justify-content: space-between;
+      margin-top: 90px;
+      column-gap: 10px;
+      @include break($breakpoint_800) {
+        display: none;
+      }
+
+      div {
+        @include flexibleRow;
+
+        .MailSvg {
+          @include break($breakpoint_l) {
+            height: 50px;
+            width: 60px;
+          }
+        }
+
+        .DescContactBlock {
+          @include flexibleCol;
+          align-items: flex-start;
+
+          h4 {
+            min-width: 100px;
+            @include Font24;
+            margin-bottom: 10px;
+            @include break($breakpoint_l) {
+              font-size: 20px;
+            }
+          }
+
+          p {
+            @include Font14;
+          }
+        }
+      }
+
+      .Tel > svg, .Mail > svg {
+        margin-right: 23px;
+      }
+
+      .Line {
+        width: 1px;
+        height: 100%;
+        background: #C0B7E854;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,46 @@
+@import "../../../assets/styles/mixines.module.scss";
+
+.SliderCustom {
+  display: none !important;
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  @include CardsBlock;
+  @include break($breakpoint_xxl) {
+    display: block !important;
+  }
+
+  > div:nth-child(2) > div > div {
+    display: flex !important;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Card {
+    width: 100%;
+  }
+
+  .WrapperArrow {
+    @include ArrowGradient;
+    top: 50%;
+    @include break(400px){
+      left:-5px;
+    }
+    &:last-child {
+      left: 95%;
+      @include break(830px){
+        left:92%;
+      }
+      @include break(600px){
+        left:90%;
+      }
+      @include break(540px){
+        left:87%;
+      }
+      @include break(400px){
+        left:83%;
+      }
+    }
+  }
+}

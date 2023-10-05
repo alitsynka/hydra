@@ -1,0 +1,352 @@
+@import './variables';
+
+@mixin break($width) {
+  @media screen and (max-width: $width) {
+    @content
+  }
+}
+
+@mixin Wrapper {
+  width: 100%;
+  padding: 50px 85px 0 85px;
+  @include break($breakpoint_xxl) {
+    padding: 30px 35px 0 35px;
+  }
+
+  @include break($breakpoint_s) {
+    padding: 25px 20px 0 20px;
+  }
+}
+
+@mixin MainContainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1280px;
+}
+
+@mixin flexibleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flexibleCol {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin NavFont {
+  color: #FFF;
+  font-family: 'Montserrat-Medium';
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin SmallBtn($background) {
+  width: 100%;
+  min-width: 160px;
+  max-width: 160px;
+  padding: 16px 36px;
+  border-radius: 40px;
+  background: $background;
+}
+
+@mixin BigBtn {
+  color: #343045;
+  font-family: 'Montserrat-Bold';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 100%;
+  min-width: 214px;
+  max-width: 214px;
+  padding: 16px 36px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+  @include break($breakpoint_s) {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@mixin Font40 {
+  font-family: 'Montserrat-Bold';
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: start;
+}
+
+@mixin Font36($weight) {
+  color: #FFF;
+  font-family: $weight;
+  font-size: 36px;
+  text-align: start;
+}
+
+@mixin Font24 {
+  color: #FFF;
+  font-family: 'Montserrat-Medium';
+  font-size: 24px;
+  font-weight: 700;
+  text-align: start;
+  line-height: 2rem;
+}
+
+@mixin Font16 {
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 400;
+  text-align: start;
+  line-height: 1.5rem;
+}
+
+@mixin Font14 {
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 400;
+  text-align: start;
+}
+
+@mixin Font12($weight) {
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: $weight;
+  text-align: start;
+}
+
+@mixin Input {
+  outline: none;
+  width: 100%;
+  padding: 27px 42px;
+  border-radius: 40px;
+  background: none;
+  border: 2px solid #FFF;
+  color: #ffffff;
+  font-family: 'Montserrat-Medium';
+  font-size: 19px;
+  @include break($breakpoint_s) {
+    padding: 18px 25px;
+  }
+}
+
+@mixin Placeholder {
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include break($breakpoint_s) {
+    font-size: 14px;
+  }
+}
+
+@mixin ContactBlock {
+  width: 100%;
+  background: radial-gradient(50.76% 90.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+  padding: 25px 40px;
+  border-radius: 90px;
+  @include break($breakpoint_s) {
+    padding: 17px 35px;
+  }
+}
+
+@mixin StepBlock {
+  .Step {
+    height: 100%;
+    @include flexibleCol;
+    @include break($breakpoint_l) {
+      width: 86% !important;
+      margin: 0 auto;
+    }
+    @include break($breakpoint_s) {
+      width: 76% !important;
+      align-items: center;
+
+    }
+
+    .CircleStep {
+      @include flexibleRow;
+      justify-content: center;
+      width: 198px;
+      height: 198px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      background: rgba(13, 13, 13, 0.32);
+
+      div {
+        @include flexibleRow;
+        justify-content: center;
+        @include Font40;
+        color: #343045;
+        font-size: 64px;
+        width: 159px;
+        height: 159px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        background: linear-gradient(251deg, #C0B7E8 12.87%, #8176AF 89.33%);
+      }
+    }
+
+    .DescOfStep {
+      @include flexibleRow;
+      position: relative;
+
+      svg {
+        position: relative;
+        top: -15px;
+        width: 67px;
+        height: 67px;
+      }
+
+      p {
+        @include Font24;
+        max-width: 190px;
+      }
+    }
+  }
+}
+
+@mixin TechnologiesBlock {
+  margin-bottom: 60px;
+  @include break($breakpoint_xl) {
+    margin-bottom: 0;
+  }
+
+  .Unreal {
+    width: 174px;
+    height: 174px;
+    @include break(650px) {
+      width: 154px;
+      height: 154px;
+    }
+  }
+
+  .Unity {
+    width: 252px;
+    height: 252px;
+    @include break(650px) {
+      width: 212px;
+      height: 212px;
+    }
+  }
+
+  .Oculus {
+    width: 263px;
+    height: 263px;
+    @include break(650px) {
+      width: 233px;
+      height: 233px;
+    }
+  }
+
+  .Vive {
+    width: 282px;
+    height: 282px;
+    @include break(650px) {
+      width: 243px;
+      height: 243px;
+    }
+  }
+
+}
+
+@mixin ArrowGradient {
+
+  @include flexibleRow;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  justify-content: center;
+  background: rgba(14, 14, 14, 0.32);
+  position: absolute;
+  z-index: 9999;
+  bottom: 0;
+  left: -20px;
+
+  &:last-child {
+    bottom: 0;
+    left: 90%;
+    @include break($breakpoint_s) {
+      left: 85%;
+    }
+  }
+
+  .Gradient {
+    @include flexibleRow;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    background: linear-gradient(268deg, #C0B7E8 -0.6%, #8176AF 98.31%);
+
+    .NextArrow {
+      position: absolute;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@mixin CardsBlock {
+  .Card {
+    padding: 25px 30px 40px 30px;
+    border-radius: 40px;
+    max-width: 310px;
+    background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+    @include flexibleCol;
+
+    .Circle {
+      @include flexibleRow;
+      justify-content: center;
+
+      height: 100%;
+      width: 100%;
+      max-width: 219px;
+      max-height: 219px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      padding: 14px;
+      background: rgba(14, 14, 14, 0.32);
+
+      img {
+        border-radius: 50%;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        //max-width: 190px;
+        //max-height: 190px;
+      }
+    }
+
+    h3 {
+      @include Font24;
+      margin-bottom: 17px;
+    }
+
+    p {
+      @include Font12(400);
+      margin-top: 20px;
+    }
+
+    button {
+      border-radius: 40px;
+      @include SmallBtn(linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%));
+      @include NavFont;
+      color: #343045;
+      margin-top: 30px;
+    }
+  }
+
+
+}
+

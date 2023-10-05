@@ -1,0 +1,106 @@
+@import "../../assets/styles/mixines.module.scss";
+@import "../../assets/styles/variables";
+
+.Wrapper {
+  @include Wrapper;
+  @include Wrapper;
+
+  .Container {
+    @include MainContainer;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .LogoBlock {
+    @include flexibleRow;
+
+    .Logo {
+      width: 102px;
+      height: 103px;
+      margin-right: 15px;
+      @include break($breakpoint_s) {
+        width: 69px;
+        height: 59.884px;
+      }
+    }
+
+    .Hydra {
+      width: 76px;
+      height: 46px;
+      @include break($breakpoint_s) {
+        width: 46px;
+        height: 28px;
+      }
+    }
+  }
+
+  .NavBlock {
+    @include break($breakpoint_l) {
+      display: none;
+    }
+
+    ul {
+      @include flexibleRow;
+
+      width: 100%;
+      column-gap: 40px;
+      justify-content: space-between;
+
+      li {
+        a {
+          @include NavFont;
+        }
+      }
+    }
+  }
+
+  .BtnsBlock {
+    @include flexibleRow;
+    column-gap: 40px;
+    @include break($breakpoint_xl) {
+      column-gap: 20px;
+    }
+    @include break($breakpoint_l) {
+      display: none;
+    }
+
+    .ContactUsBtn {
+      @include NavFont;
+      @include SmallBtn(none);
+      border: 2px solid #FFF;
+    }
+
+    .JoinHydraBtn {
+      @include NavFont;
+      @include SmallBtn(linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%));
+      border: none;
+      color: #343045;
+    }
+  }
+
+  .HumburgerMenu {
+    display: none;
+    @include break($breakpoint_l) {
+      display: block;
+    }
+  }
+}
+
+.MuiTypography {
+
+}
+
+.WrapperSideBar > div:nth-child(3) {
+  top: 119px;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  background: #211E2E;
+  //border:3px dashed darkred;
+  .Link {
+    text-transform: uppercase;
+  }
+}
+
+
+
+
