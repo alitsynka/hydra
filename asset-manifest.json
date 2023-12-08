@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hydra/static/css/main.bebd89cc.css",
-    "main.js": "/hydra/static/js/main.105429ef.js",
+    "main.css": "/hydra/static/css/main.f28b1adb.css",
+    "main.js": "/hydra/static/js/main.27cf945d.js",
     "static/js/787.28cb0dcd.chunk.js": "/hydra/static/js/787.28cb0dcd.chunk.js",
     "static/media/redViar.png": "/hydra/static/media/redViar.1539149e62963d06914a.png",
     "static/media/GirlViar.png": "/hydra/static/media/GirlViar.21be455d3ebd7462249c.png",
@@ -37,17 +37,17 @@
     "static/media/longline.svg": "/hydra/static/media/longline.45ec0c5b59f5099412551bc5447fd2dc.svg",
     "static/media/Vector.svg": "/hydra/static/media/Vector.409d121bdc02ffe9906aa3bff8ac1e43.svg",
     "static/media/chevron-circle-right.svg": "/hydra/static/media/chevron-circle-right.4a3f23a433a9e04114564735b7616375.svg",
-    "static/media/Arrow.svg": "/hydra/static/media/Arrow.68f6107d3c0e347a39fb9f9dbdec0f0c.svg",
+    "static/media/arrow.svg": "/hydra/static/media/arrow.68f6107d3c0e347a39fb9f9dbdec0f0c.svg",
     "static/media/arrow-small.svg": "/hydra/static/media/arrow-small.77766fcc44ae334d356e7131e1876b7d.svg",
     "static/media/chevron-small-down.svg": "/hydra/static/media/chevron-small-down.c130a14a226290b10f32b0593572cb7e.svg",
     "static/media/LineHorisont.svg": "/hydra/static/media/LineHorisont.a5216c5d4edca59ef924c3958899a368.svg",
     "static/media/Line.svg": "/hydra/static/media/Line.6e08aecbd76331c4515fd4bd7df26275.svg",
-    "main.bebd89cc.css.map": "/hydra/static/css/main.bebd89cc.css.map",
-    "main.105429ef.js.map": "/hydra/static/js/main.105429ef.js.map",
+    "main.f28b1adb.css.map": "/hydra/static/css/main.f28b1adb.css.map",
+    "main.27cf945d.js.map": "/hydra/static/js/main.27cf945d.js.map",
     "787.28cb0dcd.chunk.js.map": "/hydra/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bebd89cc.css",
-    "static/js/main.105429ef.js"
+    "static/css/main.f28b1adb.css",
+    "static/js/main.27cf945d.js"
   ]
 }
