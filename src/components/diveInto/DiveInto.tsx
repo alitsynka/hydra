@@ -24,9 +24,9 @@ export const DiveInto = () => {
                             <Arrow/>
                         </div>
                     </div>
-                    <div className={style.ImageBlock}>
+                    <a href={'fruitchallenge://qwerty?asd=zxcv'} target={'_blank'} className={style.ImageBlock}>
                         <img src={GirlViar} alt=""/>
-                    </div>
+                    </a>
                 </div>
 
                 <div className={style.ContactBlok}>

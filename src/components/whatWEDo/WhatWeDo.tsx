@@ -8,7 +8,7 @@ import unreal from '../../assets/imgs/Hydra-Tech1.png';
 import unity from '../../assets/imgs/Hydra-Tech3.png';
 import oculus from '../../assets/imgs/oculus.png';
 import vive from '../../assets/imgs/vive.png';
-import {ReactComponent as Arrow} from '../../assets/imgs/Arrow.svg';
+import {ReactComponent as Arrow} from '../../assets/imgs/arrow.svg';
 import {ReactComponent as ArrowSmall} from '../../assets/imgs/arrow-small.svg';
 import {ReactComponent as LineHorisont} from '../../assets/imgs/LineHorisont.svg';
 import {SliderStep} from "./sliderStep/SliderStep";
