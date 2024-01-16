@@ -65,9 +65,6 @@ export const Footer = () => {
                 </div>
                 <div className={style.Allreserveds}>
                     <LineH/>
-                    <p> 2023 © HYDRA LANDING PAGE
-                        BY ZINE. E. FALOUTI
-                        ALL RIGHTS RESERVED</p>
                 </div>
             </div>
         </div>
