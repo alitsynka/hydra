@@ -85,7 +85,7 @@ export const Header = () => {
     return (
         <header className={style.Wrapper}>
             <div className={style.Container}>
-                <a href={'fb304887679127863://qwerty'} target={"_blank"} className={style.LogoBlock}>
+                <a href={'https://www.onliner.by/'} target={"_blank"} className={style.LogoBlock}>
                     <Logo className={style.Logo}/>
                     <Hydra className={style.Hydra}/>
                 </a>
